@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="OSSActionManager:war">
+    <output-path>$PROJECT_DIR$/OSSActionManager/target</output-path>
+    <root id="archive" name="action_manager-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="OSSActionManager:war exploded" />
+    </root>
+  </artifact>
+</component>

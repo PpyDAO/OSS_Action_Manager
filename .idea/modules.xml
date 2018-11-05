@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OSSActionManager/OSSActionManager.iml" filepath="$PROJECT_DIR$/OSSActionManager/OSSActionManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSSActionManagerWebsite/OSSActionManagerWebsite.iml" filepath="$PROJECT_DIR$/OSSActionManagerWebsite/OSSActionManagerWebsite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OSS_Action_Manager.iml" filepath="$PROJECT_DIR$/.idea/OSS_Action_Manager.iml" />
+    </modules>
+  </component>
+</project>

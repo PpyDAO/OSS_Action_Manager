@@ -65,8 +65,8 @@ public class SpringSecurityConf extends WebSecurityConfigurerAdapter {
         // 去掉 CSRF
         http.csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // 使用 JWT，关闭session
-                .and()
 
+                .and()
                 .httpBasic().authenticationEntryPoint(authenticationEntryPoint)
 
                 .and()

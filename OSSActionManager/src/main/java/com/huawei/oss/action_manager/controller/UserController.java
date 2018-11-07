@@ -3,6 +3,7 @@ package com.huawei.oss.action_manager.controller;
 import com.huawei.oss.action_manager.pojo.User;
 import com.huawei.oss.action_manager.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class UserController {
     }
 
     @RequestMapping("/findByUsername")
-    public List<User> findByUsername(String username) {
-        return userService.findByUsername(username);
+    public List<User> findByUsername(@RequestBody User user) {
+        return userService.findByUsername(user.getUsername());
     }
 }

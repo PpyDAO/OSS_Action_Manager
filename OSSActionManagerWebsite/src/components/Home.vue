@@ -18,8 +18,14 @@
     },
     methods: {
       getPassword() {
-        this.$http.post("user/findByUsername", {username:this.username}, {emulateJSON: true}).then(response => {
-          this.password = response.body[0].password;
+        this.$http({
+          method: "post",
+          url: "user/findByUsername",
+          headers:{"Content-Type":"application/json"},
+          data: {username: this.username}
+        }).then(response => {
+          console.log(response)
+          this.password = response.data[0].password;
         });
       }
     }

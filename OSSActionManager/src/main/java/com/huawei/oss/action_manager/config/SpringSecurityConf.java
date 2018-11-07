@@ -71,7 +71,6 @@ public class SpringSecurityConf extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .authorizeRequests()
-
                 .anyRequest()
                 .access("@rbacauthorityservice.hasPermission(request,authentication)") // RBAC 动态 url 认证
 

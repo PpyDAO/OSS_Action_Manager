@@ -21,6 +21,8 @@ public class AjaxAccessDeniedHandler implements AccessDeniedHandler {
         responseBody.setStatus("300");
         responseBody.setMsg("Need Authorities!");
 
+        httpServletResponse.setHeader("Content-Type","application/json;charset=UTF-8");
+
         httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
     }
 }

@@ -27,8 +27,11 @@ public class AjaxAuthenticationSuccessHandler implements AuthenticationSuccessHa
         User userDetails = (User) authentication.getPrincipal();
 
         String jwtToken = JwtTokenUtil.generateToken(userDetails.getUsername(), 300, "_secret");
+        System.out.println(jwtToken);
         responseBody.setJwtToken(jwtToken);
         responseBody.setResult(userDetails.getUsername());
+
+        httpServletResponse.setHeader("Content-Type","application/json;charset=UTF-8");
 
         httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
     }

@@ -33,7 +33,7 @@
     methods: {
       logout() {
         this.$http.get("logout").then(response => {
-          if (response.body.status === "100") {
+          if (response.data.status === "100") {
             localStorage.clear();
             this.username = null;
           }

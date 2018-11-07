@@ -27,11 +27,14 @@
         if (this.$refs.ref4Checkbox.checked) {
           json["remember-me"] = "on";
         }
-        this.$http.post("login", json, {emulateJSON: true}).then(response => {
-          if (response.body.status === "200") {
-            localStorage.setItem("jwtToken", response.body.jwtToken);
-            localStorage.setItem("ossUsername", response.body.result);
-            self.$parent.setUsername(response.body.result);
+        let qs = require('qs');
+        this.$http.post("login", qs.stringify(json)).then(function (response) {
+          console.log(response)
+          if (response.data.status === "200") {
+            console.log(response.data.jwtToken)
+            localStorage.setItem("jwtToken", response.data.jwtToken);
+            localStorage.setItem("ossUsername", response.data.result);
+            self.$parent.setUsername(response.data.result);
             self.$router.push({path: '/home'});
           } else {
             alert("用户名或密码错误");
